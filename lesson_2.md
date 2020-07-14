@@ -6,7 +6,7 @@
 
    A machine learning model basically is fed the data and the solutions that we know about as inputs and it produces a set of rules as the output which can be used to forecast future trends.
 
-   !()[images/lesson2-1.png]
+   ![](images/lesson2-1.png)
 
 ## Applications of Machine Learning
 
@@ -25,7 +25,7 @@ Artificial Intelligence reached its peak and got a breakthrough with another cla
 
 ## Data Science Process
 
-!()[images/lesson2-2.png]
+![][(images/lesson2-2.png)
 
 ## Common Types of Data
 
