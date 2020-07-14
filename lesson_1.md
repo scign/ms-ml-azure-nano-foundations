@@ -11,7 +11,7 @@
 
 ---
 
-### Some applications
+### Some Applications
 * Disease recognition: Identifying whether or not given symptoms or scans are indicative of a particular condition
 * Next best actions: Suggesting next actions based on latest actions and learned paths from previous interactions
 * Personalized automated customer interactions: Using natural language techniques to help systems interact with humans in an aesthetic way
@@ -44,7 +44,7 @@ This pipeline is iterative and from any step one can return to steps #1, #2, or 
 
 ---
 
-### Types of data
+### Types of Data
 
 Most machine learning algorithms at their core are numerical in nature so it's important to understand what forms data can take on ingestion and how they can be converted to numerical forms for model training.
 
@@ -70,14 +70,66 @@ Time series data can be manipulated to reduce the correlation using restructurin
 A value, which could be numerical or not, denoting some group to which the observation belongs. There are [a number of ways](https://towardsdatascience.com/understanding-feature-engineering-part-2-categorical-data-f54324193e63) to treat categorical data, including ordinal encoding (replacing each category label with an integer value) and one-hot encoding (creating a separate true/false field for each label denoting whether or not the observation is in that group).
 
 ##### Text
+Humans communicate very inefficiently so text data is messy and noisy. **Normalization** may include removing 'stop words' (words that convey little to no information in relation to the problem), and converting words to their base form, e.g. "wildly" to "wild", or "complicating" to "complicate".
+
+Text data can be transformed into numerical values (or **vectorized**) in a wide variety of ways. Here are a few common ones:
+* Token counts - one of the simplest ways is to simply chop up the text into "tokens" (letters, words, word pieces, phrases) and count them. Features could be constructed as the number of tokens or "terms" in a piece of text or "document", or flipped and be the number of documents that contain the term, depending on what you are trying to model.
+* TF-IDF - A challenge with token counts is that terms that occur in many documents appear significant due to the high counts relative to other words but, depending on the use case, could convey relatively little information on how that document relates to the intended output. One solution is dividing the TF (term frequency) by the inverse of the number of documents it occurs in (inverse document frequency). This results in a measure of the relative "importance" of the term in differentiating that document from the rest.
+* Embedding vectors - Another way to convert text into numbers is let another machine learned algorithm do it for you! You can use a pre-trained embedding such as GloVe, or add an 'embedding' layer to a neural net model and have it learn the optimal conversion function for your use case.
 
 ##### Image
+Images are stored as grids of numbers. A small picture may measure 400 pixels ("picture elements") across and 400 pixels down, and each pixels encodes the colour of that part of the grid, encoded as a mix of red, green and blue light (3 numbers). This picture could therefore be represented by a string of (400 x 400 x 3) 480,000 numbers. The red, green and blue are 'channels'. Grayscale images have just one channel.
+
+Before training, images are often:
+* Cropped to a uniform aspect ratio
+* Normalized (e.g. mean pixel value in a channel subtracted from each pixel value in that channel)
+* Rotated
+* Resized
+* Denoised and
+* Centered.
 
 ---
 
-### Scaling data
+### Scaling Data
 
 | | |
 | - | - |
 | Standardization | Subtract the mean from each element and divide by the standard deviation |
 | Normalization | Subtract the minimum value from each element and divide by the difference between the maximum and minimum |
+
+---
+
+### The ML Ecosystem
+
+* **Libraries** allow you to leverage the work of others so you are not reinventing the wheel.
+* **Development environments** help you manage your code so you can focus on functionality rather than refactoring; some also help with writing the code with things like templates and autocompletion, and some help to run code within the environment itself which helps with prototyping and rapid iteration.
+* **Cloud services** offer a segregated standardized environment to run pipelines and train models.
+
+---
+
+### Libraries
+
+* Pandas - data ingestion, storage and manipulation
+* Numpy - low level mathematical routines optimized for matrix calculations
+* Scikit-learn - machine learning models and supporting tooling
+* Tensorflow - Google's platform for neural net training
+* PyTorch - Facebook's platform for neural net training
+* Scipy - scientific, mathematical and engineering functions
+* Matplotlib - base level visualization framework
+* Seaborn - builds on matplotlib with cleaner outputs and more variation
+* Plotly - interactive visualization library
+* Bokeh - another interactive visualization library
+
+---
+
+### Learning a Function
+
+### Regression
+
+### Parametric vs Non-parametric Algorithms
+
+### Classical ML vs Deep Learning
+
+### Approaches to Machine Learning
+
+### Trade Offs
