@@ -36,3 +36,18 @@ Artificial Intelligence reached its peak and got a breakthrough with another cla
 
 Eventually all types of data are converted to the numerical type while preparing the data.
 
+## Tabular Data
+
+  Tabular data is the most commonly used data in Machine Learning. The data is arranged in rows and columns where:
+
+  **A row** is an item or an entity
+  **A column** is a property for each item or entity
+  **A cell** is a single value
+
+### Vectors
+  
+   Vectors are an array or a list of data. It can be multi dimensional. In machine learning, since all data should be numeric, non numeric data are represented as vectors of numeric data.
+
+
+
+## 
