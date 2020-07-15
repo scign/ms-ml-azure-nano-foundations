@@ -123,13 +123,61 @@ Before training, images are often:
 ---
 
 ### Learning a Function
+The objective of machine learning is to learn a mapping function between the input variables map to an output variable.
+
+Y = f(X)
+
+During the training process the parameters of the mapping function are tweaked through an automated process such that the output Y' is as close to Y as possible for all values of X. The difference between Y and Y' is the model error. This is distinct from the irreducible error which is the error inherent in the assumptions made to model the mapping function.
 
 ### Regression
 
+In regression the objective is to learn the relationship that maps the input variables to a continuous variable such as size or score. Linear regression assumes that the mapping function will take the form
+
+Y = c + m1.x + m2.x2 + m3.x3 + ...
+
+Where each x is a feature, each m1,m2,... are the coefficients of their respective features and c is a constant. The 'c' and the 'm's are the parameters that are learned from the data. "Simple" linear regression involves one constant, one coefficient, one input variable and one output variable. Adding more variables becomes [Multiple Linear Regression](https://en.wikipedia.org/wiki/Linear_regression#Simple_and_multiple_linear_regression). This should not be confused with Generalized Linear Regression which is where there are multiple output variables.
+
+To calculate how far off the model is from truth we use a **cost function** which gives a scalar value from the model error for multiple predictions. The objective is to find values for the parameters such that the output of the cost function is minimized.
+
+There are several of assumptions involved in using a linear regression model:
+1. The relationship between the features and output is linear. If not, use a different model algorithm.
+1. Each feature is independent of all the others. If any features are related the model function will essentially double-count the features and give them more importance than it should.
+1. The distribution of the data in each dimension is close to gaussian (normal). If not, try and transform the data so that the distribution is gaussian.
+
+Some tips for data preparation when using linear models:
+1. With large values or differently scaled values the model parameters can get very large as the model tries to compensate for different scales. Scaling all features and output to the same range (either through standardization or normalization, or both) helps to keep the parameters manageable and reduce the multi-dimensional distance between the points. Also with standardizing, centering and scaling don't necessarily have to be done using the mean and the standard deviation.
+2. Consider whether you can remove noise. Outliers can have a lot of influence on the model parameters.
+
+---
+
 ### Parametric vs Non-parametric Algorithms
+Parametric algorithms assume that the mapping function takes a known form with parameters that are learned during training. Non-parametric algorithms have a less well-defined structure such that the resulting function may take a wider range of forms.
+
+| | Parametric algorithms | Non-parametric Algorithms |
+|-|-|-|
+| Pros | Easier to interpret<br>Faster to train<br>Require less data | Fit a large number of forms<br>Fewer assumptions about the data<br>Might fit data more closely |
+| Cons | Constrained to a specific form<br>Limited in model complexity<br>Fit real world data poorly | Slower to train<br>Require more data to fit<br>Easier to overfit<br>Can be less interpretable |
+| Examples | Logistic Regression<br>Linear Discriminant Analysis<br>Perceptron<br>Naive Bayes<br>Simple Neural Networks | k-Nearest Neighbors<br>Decision Trees like CART and C4.5<br>Support Vector Machines |
+
+---
 
 ### Classical ML vs Deep Learning
+Deep learning refers specifically to machine learning using neural networks with more than one hidden layer. In this form you can find more complex mapping functions but they are often difficult to interpret and explain, they can easily be overfit and the larger the model the more computational power is required to train the model and generate predictions.
+
+---
 
 ### Approaches to Machine Learning
+Supervised learning is where each set of input variables is linked to its respective truth output and the model is trained to learn the mapping. Forms of supervised learning includ classification, regression, and similarity learning.
+
+Unsupervised learning is where input data is presented to the algorithm which attempts to extract latent structure from the data. Common types of unsupervised learning are dimensionality reduction such as PCA and LDA, clustering and anomaly detection.
+
+Reinforcement learning is where parameter updates to the model during training come from a reward function rather than an error between predictions and truth. This process is often used in modeling actions of an agent in an environment. It is a less passive process as the actions performed by the agent may influence future inputs.
+
+---
 
 ### Trade Offs
+#### Overfitting vs Underfitting
+A model can be overfit to data meaning that it performs accurately on the data on which it was trained but performs poorly on previously unseen data. A model can also be underfit where it fails to perform well even on the training data. A poor choice of model, poor choice of features or a poor training process can all result in underfitting or overfitting.
+
+#### Bias vs Variance
+If you train different models using the same algorithm but different training data (from the same population), you are likely to end up with different models. If you consider the model error with respect to each of the models, the bias is how far off the truth the models are in aggregate, and the variance is the spread of the model error. The more complex a model the higher the chance you'll get a different model error therefore the higher the variance, but the more tightly the complex function will fit the data so the lower the bias.
