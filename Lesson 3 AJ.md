@@ -23,3 +23,33 @@ Many algorithms perform poorly with too much information just as with too little
 
 #### Correlated Features
 If a two features by nature vary together across the dataset they are [correlated](https://www.theanalysisfactor.com/multicollinearity-explained-visually/). Many machine learning models will treat both variables as if they were independent and lend more weight to the underlying information than they should. The effect of this is that model parameters will be learned that are influenced by both features in the same direction i.e. the model is being pulled harder in that direction at the expense of other feature dimensions.
+
+#### Dimensionality Reduction
+When you have a large number of features / columns, the dataset is said to have *high dimensionality*. Why is this bad? Because as you increase the number of dimensions, the distance between points increases, eventully getting to a point where points are so far apart that identifying similarities and patterns becomes almost meaningless.
+
+###### Resources that help understand this concept
+https://www.youtube.com/watch?v=zwAD6dRSVyI&t=550
+https://stats.stackexchange.com/questions/169156/explain-curse-of-dimensionality-to-a-child
+
+### Model Drift
+
+In the real world, input data doesn't stay the same. Things change. A solution must be able to measure change in the input data, else the model will no longer reflect the right patterns.
+
+### Model Training
+
+1. Choose hyperparameters
+1. Split the data into a training set (train the model), a validation set (optional, validate that the chosen trauned model works), and a test set (to evaluate the training hyperparameters chosen)
+
+### Evaluation
+
+#### Classification
+A confusion matrix shows the correct and incorrect classification of items. Actual class is usually on the top and Predicted on the left.
+
+### Multiple learners
+As amazing as machine learning is, a model will never be perfect. Indeed some algorithms will only ever fit real world data poorly (for example linear regression models). Just as looking at a sample of data points helps to understand the population from which it was taken, training multiple models from the same data, either using the same algorithm with some random parameters, or using multiple algorithms, the collective power can be increased.
+#### Ensemble Learning
+* **Bootstrap Aggregation (Bagging)** means training multiple models on subsamples of the training data and averaging the predictions.
+* **Boosting** means training multiple models using the same training data but different hyperparameters.
+* **Stacking** means training multiple models using different algorithms and combining the outputs.
+#### Automated Machine Learning (AutoML)
+AutoML uses automation to repeatedly train and score a number of models using different feature sets, cleaning steps, algorithms and hyperparameters, etc. We can then review the scores and pick the model that performed the best based on our use case.

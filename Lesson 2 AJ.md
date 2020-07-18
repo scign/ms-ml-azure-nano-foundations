@@ -1,4 +1,5 @@
 ## Lesson 2 notes
+*by Aleem Juma*
 
 ---
 
