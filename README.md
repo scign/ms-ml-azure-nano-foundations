@@ -11,11 +11,11 @@ Notebooks, code and notes from the Udacity Microsoft Scholarship Foundations cou
 
 ## Lesson notes
 Lesson 2
-    * Aleem: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/Lesson%202%20AJ.md
-    * Poornima: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/lesson_2.md
+* Aleem: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/Lesson%202%20AJ.md
+* Poornima: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/lesson_2.md
 
 Lesson 3
-    * Aleem: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/Lesson%203%20AJ.md
+* Aleem: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/Lesson%203%20AJ.md
 
 ## Datasets used
 ### Lab 1
