@@ -3,6 +3,8 @@ Notebooks, code and notes from the Udacity Microsoft Scholarship Foundations cou
 ## Notebooks
 * Lab 1: https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/lab1_nyc-data.ipynb
 * Lab 3: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/lab2_bike-rental.ipynb
+* Lesson subtitles download: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200730-aj-udacity_youtube_subtitles_download.ipynb
+* Lesson summary: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200807-aj-udacity_lesson_summaries.ipynb
 
 ## Other code
 * [Python practice challenge 01 - Character Input](https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/PracticePython%2001%20Character%20Input.ipynb)
