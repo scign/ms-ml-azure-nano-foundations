@@ -6,6 +6,14 @@ Notebooks, code and notes from the Udacity Microsoft Scholarship Foundations cou
 * Lesson subtitles download: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200730-aj-udacity_youtube_subtitles_download.ipynb
 * Lesson summary: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200807-aj-udacity_lesson_summaries.ipynb
 
+## Webinars
+### Deploy a python flask app to Azure
+* Recording: https://us02web.zoom.us/rec/play/68YscO2q_zk3HIWVtgSDC_EtW47vfaqsgSQZ-fcInRzkBiEGOgCvNLJGMeZGdRRJ36vFkI9MvxZx456Z
+### NLP with spaCy
+* Recording: https://us02web.zoom.us/rec/play/upIscrz6_D83GNWVtQSDBKV_W43rLq6s2nAd-KdbzkmzVHABMFLyYLERYbC1tOPE50t67YuyrgNKKTrx
+* Notebook 1: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200815-aj-spacy_demo.ipynb
+* Notebook 2: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200815-aj-spacy_demo_after_crash.ipynb
+
 ## Other code
 * [Python practice challenge 01 - Character Input](https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/PracticePython%2001%20Character%20Input.ipynb)
 * [Python practice challenge 02 - Odd or Even](https://github.com/scign/ms-ml-azure-nano-foundations/blob/master/PracticePython%2002%20Odd%20or%20Even.ipynb)
