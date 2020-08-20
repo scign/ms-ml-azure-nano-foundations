@@ -6,6 +6,9 @@ Notebooks, code and notes from the Udacity Microsoft Scholarship Foundations cou
 * Lesson subtitles download: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200730-aj-udacity_youtube_subtitles_download.ipynb
 * Lesson summary: https://nbviewer.jupyter.org/github/scign/ms-ml-azure-nano-foundations/blob/master/20200807-aj-udacity_lesson_summaries.ipynb
 
+The Lesson Summary code put my visual in the top ten visuals submitted for the Visual Challenge in the course.
+![Visual Challenge Badge](images/VisualChallengeBadge_Aleem.png "Visual Challenge Winner!")
+
 ## Webinars
 ### Deploy a python flask app to Azure
 * Recording: https://us02web.zoom.us/rec/play/68YscO2q_zk3HIWVtgSDC_EtW47vfaqsgSQZ-fcInRzkBiEGOgCvNLJGMeZGdRRJ36vFkI9MvxZx456Z
